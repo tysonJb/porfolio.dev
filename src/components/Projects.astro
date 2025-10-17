@@ -1,0 +1,80 @@
+---
+import nextJS from './icons/nextJS.astro';
+import tailwind from './icons/tailwind.astro';
+import astro from './icons/aicon.astro';
+
+const TAGS = {
+    
+    NEXT : 
+    {
+    name : "Next.js",
+    class : "bg-black text-white py-1",
+    icon : nextJS
+    },
+
+    TAILWIND : {
+    name : 'Tailwind CSS',
+    class : "bg-[#2878b9] text-white",
+    icon : tailwind
+    },
+
+    ASTRO : {
+    name : 'Astro',
+    class : "bg-red-700 text-white",
+    icon : astro
+    },
+            }
+            
+const PROJECTS = [
+    {
+        title: "Desarollo Web - Landing Page para Empresa",
+        description: "Elaboracion de una landing page para una empresa minera para mejorar la confianza de los clientes.",
+        link: "https://www.youtube.com/watch?v=uYDOuUbsvj8&list=RDy9D2sW5lY88&index=27",
+        Github: "#",
+        date: "06 Setiembre 2025 - 10 Setiembre 2025",
+        image: '/public/img/landing.webp',
+        tags: [TAGS.TAILWIND, TAGS.ASTRO],
+
+    },
+    
+
+        {
+        title: "Proyecto Personal - Clon de Spotify",
+        description: "Desarrollo de clon de spotify para porfolio, mejorar habilidades .",
+        link: "https://www.youtube.com/watch?v=uYDOuUbsvj8&list=RDy9D2sW5lY88&index=27",
+        Github: "#",
+        date: "01 Setiembre 2025 - 15 Setiembre 2025",
+        image: '/public/img/spotify.webp',
+        tags: [TAGS.NEXT, TAGS.TAILWIND, TAGS.ASTRO],
+
+    },
+
+]
+---
+
+{PROJECTS.map(({ image, title, description, tags, date }) => (
+  <article class="flex flex-col mt-10 space-x-0 gap-y-5 group md:flex-row md:space-x-8 md:space-y-0">
+  <div class="w-full md:w-1/2"> 
+    <img
+      class="relative flex flex-col items-center col-span-6 row-span-5 gap-8 transition duration-500 ease-in-out transform shadow-xl overflow-clip rounded-xl sm:rounded-xl md:group-hover:-translate-y-1 md:group-hover:shadow-2xl lg:border lg:border-white lg:hover:border-white lg:hover:bg-gray-800/50r"
+      src={image}
+      alt={`captura de pantalla del proyecto ${title}`}
+    />
+    </div>
+    <div class="flex-1 flex flex-col">
+      <h3 class="font-semibold text-xl md:text-2xl mb-2 text-sky-800">{title}</h3>
+      <p class="text-base md:text-lg text-pretty mb-4">{description}</p>
+      <ul class="flex row gap-x-2 gap-y-2  md:gap-x-4 flex-row pb-2 flex-wrap">
+        {tags.map((tag) => (
+          <li>
+            <span class={`flex gap-x-2 rounded-full text-xs md:text-sm ${tag.class} py-1 px-2`}>
+              <tag.icon class="size-4" />
+              {tag.name}
+            </span>
+          </li>
+        ))}
+      </ul>
+      <p class="py-2 text-xs text-gray-500 md:text-sm">{date}</p>
+    </div>
+  </article>
+))}

@@ -1,0 +1,35 @@
+---
+import ExperienceItem from './ExperienceItem.astro';
+import type { ACTION_ERROR_CODES } from "astro:actions"
+import { date } from "astro:schema"
+
+const EXPERIENCE = [
+    {
+        date: 'Actualmente',
+        title: 'Implementacion de aplicativo movil para gestion de inventarios',
+        description: 'Dada las necesidades de la empresa, se implementdo una aplicacion movil para gestionar los inventarios de los productos, permitiendo a los empleados registrar entradas y salidas en tiempo real, mejorando la precision y eficiencia del proceso de inventario.', 
+        link: '#',
+    },
+     {
+        date: 'Marzo 2025',
+        title: 'Elaboracion website corporativo',
+        description: 'Elaboracion de un website para exposision a mercado de los trabajos a realizar.', 
+    },
+     {
+        date: 'Setiembre 2024',
+        title: 'Practicante en desarrollo web',
+        description: 'Experiencia en practicas de 6 meses en digital buho con proyectos de mejora para la web de los clientes.',    
+    },
+
+]
+---
+<ol class="relative border-s border-gray-200 dark:border-gray-700 ml-3">     
+    {
+        EXPERIENCE.map((experience) => (
+            <li class="mb-10 ms-4">
+                <ExperienceItem {...experience} />
+            </li>
+        ))
+    }             
+
+

@@ -1,0 +1,149 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/header.astro';
+import Badge from '../components/Badge.astro';
+import LinkedInIcon from '../components/icons/iconsNav//LinkedIn.astro';
+import SocialPill from '../components/SocialPill.astro'; // 
+import GithubIcon from '../components/icons/iconsNav//Github.astro';
+import Experience from '../components/Experience.astro';
+import SectionContainer from '../components/SectionContainer.astro';
+import BriefCase from '../components/icons/BriefCase.astro';
+import CodeIcon from '../components/icons/Code.astro';
+import Projects from '../components/Projects.astro';
+import InstragramIcon from '../components/icons/iconsNav//Instagram.astro';
+import TwiterIcon from '../components/icons/iconsNav//Twiter.astro';  
+import EmailIcon from '../components/icons/iconsNav/Email.astro';
+import CardIcon from '../components/icons/iconsNav/Carrd.astro';
+import UserIcon from '../components/icons/User.astro';
+import SectionHabilidades from '../components/SectionHabilidades.astro';
+import NextIcon from '../components/icons/IconsHabilidades/LogoNext.astro';
+import AstroIcon from '../components/icons/IconsHabilidades/LogoAstro.astro';
+import TailwindIcon from '../components/icons/IconsHabilidades/LogoTailwind.astro';
+import JsIcon from '../components/icons/IconsHabilidades/LogoJS.astro';
+import ReactIcon from '../components/icons/IconsHabilidades/LogoReact.astro';
+import SqlIcon from '../components/icons/IconsHabilidades/LogoSql.astro';
+import MongoIcon from '../components/icons/IconsHabilidades/LogoMongo.astro';
+
+
+---
+
+<Layout title="Porfolio de Deko -- Porfolio de Deko, Desarrollador de Software"
+description="Porfolio de Deko, desarrollador de software. Descubre mis proyectos, habilidades y experiencia en desarrollo web y móvil.">
+  
+  <main class="py-4">
+   
+    <SectionContainer class="align-center text-center mx-auto mt-20 flex-col " > 
+      <div class="pb-85 mt-20 align-center ">
+        <p class="text-sky-700 font-extrabold text-2xl text-center py-5">H O L A  </p>
+
+      <h1 class="text-white lg:text-8xl text-5xl font-semibold flex row pb-1 mb-8 text-center justify-center  "> 
+        Soy Jorge Barrantes
+ 
+      </h1>
+
+
+      <nav class="flex text-pretty  text-sm lg:text-xl justify-center align-center gap-x-8 text-center opacity-80 mt-5 ">
+      <span >Desarrollador de Software</span>
+      <span class="text-sky-600 text-xl">•</span>
+      <span>Estudiante / Practicante</span>
+      <span class="text-sky-600 text-xl">•</span>
+      <span>Adicto al Cafe </span>
+      </nav>
+      
+    <nav class="flex row gap-x-15 py-2 mt-20 lg:mt-10 flex-row flex-wrap md:flex-nowrap gap-6 md:gap-20 justify-center items-center " >
+      <a href="https://github.com/tysonJb">
+        <GithubIcon  class="w-12 h-12 md:w-14 md:h-14 text-white hover:opacity-60 "  />
+      </a>
+       <a href="https://www.linkedin.com/in/jorge-barrantes-997149359/">
+        <LinkedInIcon class="w-12 h-12 md:w-14 md:h-14 text-white hover:opacity-60" />
+       </a>
+        <a href="https://www.instagram.com/jorgebarr_ldy/">
+        <InstragramIcon class="w-12 h-12 md:w-14 md:h-14 text-white hover:opacity-60" />
+        </a>
+        <a href="https://x.com/Jorgb310130">
+        <TwiterIcon class="w-12 h-12 md:w-14 md:h-14 text-white hover:opacity-60" />
+        </a>
+        <a href="">
+        <EmailIcon class="w-12 h-12 md:w-14 md:h-14 text-white hover:opacity-60" />
+        </a>
+
+    </nav>
+    
+        <div class="flex justify-center items-center w-full max-w-xs mx-auto mt-10 md:mt-20 lg:mt-32">
+          <CardIcon class="w-14 h-14 md:w-20 md:h-20 animate-pulse" />
+        </div>
+        <span class="text-sm w-14 h-14 md:w-20 py-1.5 px-3 mt-10 hover:opacity-90 bg-white/5 rounded-full hover:text-sky-700 backdrop-blur-md shadow-md font-semibold ">Descargar CV</span>
+ 
+
+{/*  <nav class="flex gap-x-4 mt-1 mb-2 py-6 pb-35 border-b border-gray-300 ">
+        <SocialPill href="#">
+            <LinkedInIcon class="size-5 items-center" />
+            <span class="text-xl">LinkedIn</span>
+        </SocialPill>
+        <SocialPill href="#">
+            <GithubIcon class="size-6 items-center"  />
+            <span class="text-xl">GitHub</span>
+        </SocialPill>
+      </nav>
+*/}     
+    </div>
+    </SectionContainer>
+ 
+
+  <SectionContainer id="sobre-mi" class="scroll-mt-24"  >
+    <section class="flex flex-col mx-auto items-center justify-center h-full align-center text-center lg:w-[700px]">
+      
+     <div class="flex gap-x-3 items-center justift-center align-center py-5">
+      <UserIcon class="text-gray-800 size-6 lg:size-10"/>
+        <h3 class="flex flex-row gap-x-2 font-bold text-xl lg:text-5xl text-gray-700 items-center">
+         Sobre Mi
+         <Badge class="">Disponible Para Trabajar</Badge>
+       </h3>
+    </div>
+
+    <div class="flex flex-row text-sm lg:text-xl gap-[100px] ">
+      <p class="text-gray-900  ">
+        +1 año de experiencia como soporte tecnico, de <span class="text-sky-800 font-semibold">Lima - Peru.</span> Estudiante de ultimo ciclo de <span class= "text-sky-800 font-semibold">Desarrollo de Software.</span> <br><br> Actualemente estoy trabajando en mejorar mis capacidades para dedicarme al desarrollo backend. <br><br> Me considero una persona responsable, autodidacta y con muchas ganas de aprender. 
+       </p> 
+      </div>
+      <img class="w-72 h-72 object-cover rounded-full mt-15 border-white shadow-lg" src="./public/img/me.webp" alt="Imagen personal">
+    </section>
+      </SectionContainer>
+
+<SectionContainer class="py-8 md:py-16 lg:py-24 scroll-mt-10 mt-20 md:mt-16 lg:mt-24" id="habilidades"> 
+  <section>
+    <h2 class="text-center mb-10 justify-center text-2xl lg:text-5xl font-bold items-center  flex gap-x-2 text-gray-800">
+    Habilidades
+    </h2>
+<nav class="flex flex-row flex-wrap md:flex-nowrap gap-6 md:gap-20 justify-center items-center">
+  <NextIcon class="w-12 h-12 md:w-16 md:h-16 text-white" />
+  <TailwindIcon class="w-12 h-12 md:w-16 md:h-16 text-white" />
+  <AstroIcon class="w-12 h-12 md:w-16 md:h-16 text-white" />
+  <JsIcon class="w-12 h-12 md:w-16 md:h-16 text-white" />
+  <ReactIcon class="w-12 h-12 md:w-16 md:h-16 text-white" />
+</nav>
+
+<!-- sección siguiente -->
+<section>
+  <h2 class="text-center py-20 text-2xl lg:text-5xl font-bold flex justify-center items-center gap-x-2 text-gray-800">
+    En aprendizaje ...
+  </h2>
+  <nav class="flex flex-row flex-wrap md:flex-nowrap gap-6 md:gap-20 justify-center items-center">
+    <SqlIcon class="w-12 h-12 md:w-16 md:h-16 text-gray-800" />
+    <MongoIcon class="w-12 h-12 md:w-16 md:h-16 text-gray-800" />
+  </nav>
+</section>
+
+ </SectionContainer>
+ 
+  <SectionContainer id="proyectos" class="text-gray-900 mt-24 md:mt-16 lg:mt-50 scroll-mt-24 ">
+    <h2 class="text-center justify-center text-2xl lg:text-4xl font-bold items-center flex gap-x-2 text-gray-800">
+      <CodeIcon class="size-10" />
+      Proyectos 
+    </h2>
+    <Projects />
+  </SectionContainer>
+
+
+  </main>
+</Layout>
